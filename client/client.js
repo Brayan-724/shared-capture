@@ -1,5 +1,5 @@
 const url = new URL("/ws", location.href);
-url.protocol = "ws:";
+url.protocol = location.protocol === "https:" ? "wss:" : "ws:";
 
 // https://stackoverflow.com/questions/32789417/loading-chunks-into-html5-video
 const mediaSource = new MediaSource();
